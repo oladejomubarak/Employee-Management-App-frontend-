@@ -15,7 +15,10 @@ class ListEmployeeComponents extends Component{
           <table className="table table-striped table-ordered">
             <thead>
               <tr>
-                <th>Employee</th>
+                <th>Employee First Name</th>
+                <th>Employee Last Name</th>
+                <th>Employee Email</th>
+                <th>Action</th>
               </tr>
             </thead>
           </table>
