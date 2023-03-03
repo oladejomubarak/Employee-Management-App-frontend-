@@ -21,6 +21,18 @@ class ListEmployeeComponents extends Component{
                 <th>Action</th>
               </tr>
             </thead>
+            <tbody>
+              {
+                this.state.employees.map(
+                  employee =>
+                  <tr key= {employee.id}>
+                    <td>{employee.firstName}</td>
+                    <td>{employee.lastName}</td>
+                    <td>{employee.email}</td>
+                  </tr>
+                )
+              }
+            </tbody>
           </table>
         </div>
 
