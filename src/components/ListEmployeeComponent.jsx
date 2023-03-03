@@ -10,7 +10,16 @@ class ListEmployeeComponents extends Component{
   render(){
     return(
       <div>
-        <h2 className="text-center">List Employee</h2>
+        <h2 className="text-center">Employees List</h2>
+        <div className="row">
+          <table className="table table-striped table-ordered">
+            <thead>
+              <tr>
+                <th>Employee</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
 
       </div>
     );
