@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EmployeeServices from "../services/EmployeeServices";
 
 class ListEmployeeComponents extends Component{
   constructor(props){
@@ -6,6 +7,11 @@ class ListEmployeeComponents extends Component{
     this.state={
       employees:[]
     }
+  }
+  componentDidMount(){
+    EmployeeServices.getEmployees().then((res)=>{
+      this.setState({employees: res.data});
+    });
   }
   render(){
     return(
