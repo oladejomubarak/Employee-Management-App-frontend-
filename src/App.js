@@ -9,11 +9,17 @@ import FooterComponent from './components/FooterComponent';
 function App() {
   return (
     <div>
-      <HeaderComponent />
-    <div className="container">
-      <ListEmployeeComponents />   
-    </div>
-    <FooterComponent />
+      <Router>
+        <div className='container'>
+        <HeaderComponent />
+            <div className="container">
+              <Switch>
+                <ListEmployeeComponents />
+              </Switch>   
+            </div>
+          <FooterComponent />
+        </div>
+      </Router>
     </div>
   );
 }
