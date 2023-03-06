@@ -17,6 +17,7 @@ class ListEmployeeComponents extends Component{
     return(
       <div>
         <h2 className="text-center">Employees List</h2>
+        <div></div>
         <div className="row">
           <table className="table table-striped table-ordered">
             <thead>
