@@ -51,6 +51,8 @@ class CreateEmployeeComponent extends Component {
                 className='form-control'  value={this.state.email} 
                 onChange={this.changeEmailHandler}/>
               </div>
+                <button className='btn btn-success' onClick={this.saveEmployee}>Save</button>
+            <button className='btn btn-danger' onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
             </form>
             </div>
           </div>
