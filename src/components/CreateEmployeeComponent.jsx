@@ -8,11 +8,21 @@ class CreateEmployeeComponent extends Component {
       lastName:'',
       email:''
     }
+    this.changeFirstNameHandler=this.changeFirstNameHandler.bind(this);
+    this.changeLastNameHandler=this.changeLastNameHandler.bind(this);
+    this.changeEmailHandler=this.changeEmailHandler.bind(this);
   }
 
   changeFirstNameHandler=(event)=>{
     this.setState=({firstName: event.target.value});
   }
+  changeLastNameHandler=(event)=>{
+    this.setState=({lastName: event.target.value});
+  }
+  changeEmailHandler=(event)=>{
+    this.setState=({email: event.target.value});
+  }
+
 
 
   render() {
@@ -28,6 +38,18 @@ class CreateEmployeeComponent extends Component {
                 <input placeholder='First Name' name='firstName' 
                 className='form-control'  value={this.state.firstName} 
                 onChange={this.changeFirstNameHandler}/>
+              </div>
+              <div className='form-group'>
+                <label>Last Name: </label>
+                <input placeholder='Last Name' name='lastName' 
+                className='form-control'  value={this.state.lastName} 
+                onChange={this.changeLastNameHandler}/>
+              </div>
+              <div className='form-group'>
+                <label>Email Address: </label>
+                <input placeholder='Email Address' name='email' 
+                className='form-control'  value={this.state.email} 
+                onChange={this.changeEmailHandler}/>
               </div>
             </form>
             </div>
