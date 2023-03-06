@@ -5,20 +5,24 @@ import './styles/style.css'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
+import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 
 function App() {
   return (
     <div>
       <Router>
-        <div className='container'>
         <HeaderComponent />
             <div className="container">
               <Switch>
-                <ListEmployeeComponents />
-              </Switch>   
+                <Route path = "/" exact component={ListEmployeeComponents}></Route>
+                <Route path = "/employess" component={ListEmployeeComponents}></Route>
+                <Route path = "/add-employess" component={CreateEmployeeComponent}></Route>
+                
+                </Switch>
+                 
             </div>
           <FooterComponent />
-        </div>
+      
       </Router>
     </div>
   );
