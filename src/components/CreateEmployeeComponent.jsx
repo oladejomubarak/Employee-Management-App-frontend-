@@ -11,6 +11,11 @@ class CreateEmployeeComponent extends Component {
     this.changeFirstNameHandler=this.changeFirstNameHandler.bind(this);
     this.changeLastNameHandler=this.changeLastNameHandler.bind(this);
     this.changeEmailHandler=this.changeEmailHandler.bind(this);
+    this.saveEmployee=this.saveEmployee.bind(this);
+  }
+
+  saveEmployee=(e)=>{
+    e.preventDefault();
   }
 
   changeFirstNameHandler=(event)=>{
