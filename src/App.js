@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import ListEmployeeComponents from './components/ListEmployeeComponent';
 import './styles/style.css'
@@ -15,9 +15,9 @@ function App() {
             <div className="container">
               <Switch>
                 <Route path = "/" exact component={ListEmployeeComponents}></Route>
-                <Route path = "/employess" component={ListEmployeeComponents}></Route>
-                <Route path = "/add-employess" component={CreateEmployeeComponent}></Route>
-                
+                <Route path = "/employees" component={ListEmployeeComponents}></Route>
+                <Route path = "/add-employee" component={CreateEmployeeComponent}></Route>
+              
                 </Switch>
                  
             </div>
