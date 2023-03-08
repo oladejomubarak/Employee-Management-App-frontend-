@@ -7,7 +7,11 @@ class ListEmployeeComponents extends Component{
     this.state={
       employees:[]
     }
-    this.addEmployee = this.addEmployee.bind(this)
+    this.addEmployee = this.addEmployee.bind(this);
+    this.updateEmployee=this.updateEmployee.bind(this);
+  }
+  updateEmployee(id){
+    this.props.history.push(`update-employee/${id}`);
   }
   componentDidMount(){
     EmployeeServices.getEmployees().then((res)=>{
