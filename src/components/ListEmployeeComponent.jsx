@@ -42,6 +42,9 @@ class ListEmployeeComponents extends Component{
                     <td>{employee.firstName}</td>
                     <td>{employee.lastName}</td>
                     <td>{employee.email}</td>
+                    <td>
+                      <button onClick={()=> this.updateEmployee(employee.id)} className="btn btn-info">Update Info</button>
+                    </td>
                   </tr>
                 )
               }
