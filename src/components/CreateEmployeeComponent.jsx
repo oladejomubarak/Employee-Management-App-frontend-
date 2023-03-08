@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EmployeeServices from '../services/EmployeeServices';
 
 class CreateEmployeeComponent extends Component {
   constructor(props){
@@ -16,19 +17,27 @@ class CreateEmployeeComponent extends Component {
 
   saveEmployee=(e)=>{
     e.preventDefault();
+    let employee ={firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email};
+    console.log('employee => '+ JSON.stringify(employee));
+
+    EmployeeServices.createEmployee(employee).then(res=>{
+      this.props.history.push('/employees');
+    });
   }
 
   changeFirstNameHandler=(event)=>{
-    this.setState=({firstName: event.target.value});
+    this.setState({firstName: event.target.value});
   }
   changeLastNameHandler=(event)=>{
-    this.setState=({lastName: event.target.value});
+    this.setState({lastName: event.target.value});
   }
   changeEmailHandler=(event)=>{
-    this.setState=({email: event.target.value});
+    this.setState({email: event.target.value});
   }
 
-
+cancel(){
+  this.props.history.push('/employees');
+}
 
   render() {
     return (
