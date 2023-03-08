@@ -19,7 +19,7 @@ function App() {
                 <Route path = "/" exact component={ListEmployeeComponents}></Route>
                 <Route path = "/employees" component={ListEmployeeComponents}></Route>
                 <Route path = "/add-employee" component={CreateEmployeeComponent}></Route>
-                <Route path = "/update-employee:id" component={UpdateEmployeeComponent}></Route>
+                <Route path = "/update-employee/:id" component={UpdateEmployeeComponent}></Route>
               
                 </Switch>
                  
