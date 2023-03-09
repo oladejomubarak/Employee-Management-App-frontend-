@@ -53,7 +53,8 @@ class ListEmployeeComponents extends Component{
                     <td>{employee.lastName}</td>
                     <td>{employee.email}</td>
                     <td>
-                      <button onClick={()=> this.updateEmployee(employee.id)} className="btn btn-info">Update Info</button>
+                      <button onClick={()=> this.updateEmployee(employee.id)} className="btn btn-info">Update info</button>
+                      <button style={{marginLeft:"50px"}} onClick={()=> this.viewEmployee(employee.id)} className="btn btn-info">View employee</button>
                       <button style={{marginLeft: "50px"}} onClick={()=> this.deleteEmployee(employee.id)} className="btn btn-danger">delete employee</button>
                     </td>
                   </tr>
