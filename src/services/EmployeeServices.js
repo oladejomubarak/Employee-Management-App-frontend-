@@ -1,7 +1,7 @@
 import axios, { Axios } from "axios";
 
 const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees"
-class Employeeservice{
+class EmployeeService{
   getEmployees(){
     return axios.get(EMPLOYEE_API_BASE_URL);
   }
@@ -18,4 +18,4 @@ class Employeeservice{
   }
 
 }
-export default new Employeeservice();
+export default new EmployeeService();
