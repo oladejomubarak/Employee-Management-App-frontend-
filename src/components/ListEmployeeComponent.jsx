@@ -14,6 +14,9 @@ class ListEmployeeComponents extends Component{
   updateEmployee(id){
     this.props.history.push(`/update-employee/${id}`);
   }
+  viewEmployee(id){
+    this.props.history.push(`/view-employee/${id}`);
+  }
   componentDidMount(){
     EmployeeServices.getEmployees().then((res)=>{
       this.setState({employees: res.data});
